@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دار أثير | متجر العطور الشرقية والنيش الفاخرة</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Amiri (Calligraphic luxury) & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Tajawal', system-ui, sans-serif; }
+    .font-amiri { font-family: 'Amiri', serif; }
+    /* Luxury gold gradients */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow:hover {
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-[#140810] text-[#F3E9E4] antialiased min-h-screen selection:bg-[#D4AF37] selection:text-black">
+
+  <!-- Top Luxury Announcement -->
+  <div class="bg-[#210D1B] border-b border-[#3D1E30] text-[#D8B467] text-xs py-2 px-4 text-center tracking-widest font-amiri text-sm">
+    شحن مجاني لكافة محافظات مصر والخليج للطلبات الأكثر من 2,000 ج.م | عينات مجانية فاخرة مع كل طلب
+  </div>
+
+  <!-- Header -->
+  <header class="bg-[#1A0A15]/90 backdrop-blur-md border-b border-[#381B2D] sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3">
+        <span class="w-9 h-9 rounded-full border border-[#D4AF37]/60 flex items-center justify-center font-amiri text-[#D4AF37] font-bold text-lg">
+          أ
+        </span>
+        <span class="font-amiri text-2xl font-bold tracking-wider gold-gradient-text">
+          دار أثيـــر
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#C8B3B0]">
+        <a href="#collection" class="hover:text-[#D4AF37] transition-colors">المجموعة العطرية</a>
+        <a href="#pyramid" class="hover:text-[#D4AF37] transition-colors">هرم النوتات</a>
+        <a href="#story" class="hover:text-[#D4AF37] transition-colors">فلسفة التركيب</a>
+        <a href="#gift" class="hover:text-[#D4AF37] transition-colors">هدايا فاخرة</a>
+      </nav>
+
+      <!-- Cart Button with Dynamic Badge -->
+      <button id="openCartBtn" class="flex items-center gap-2.5 px-4 py-2 rounded-full border border-[#D4AF37]/40 bg-[#240F1E] hover:border-[#D4AF37] text-sm text-[#F3E9E4] transition-all hover:scale-105">
+        <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        <span>الحقيبة العطرية</span>
+        <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-[#D4AF37] text-[#1A0A15] text-xs font-bold flex items-center justify-center">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-16 md:py-24 relative overflow-hidden" id="top">
+    <!-- Ambient gold glow -->
+    <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="space-y-6 text-right">
+        <span class="inline-block text-xs uppercase tracking-widest text-[#D4AF37] border-b border-[#D4AF37]/40 pb-1 font-amiri text-sm">
+          مستخلصات نادرة · ثبات ملكي
+        </span>
+
+        <h1 class="font-amiri text-4xl sm:text-6xl font-bold leading-[1.3] text-[#FAF5F2]">
+          عطرٌ يبقى أثره في الذاكرة <br>
+          <span class="gold-gradient-text">طويلاً بعد رحيلك.</span>
+        </h1>
+
+        <p class="text-sm sm:text-base text-[#BFA6A1] leading-relaxed max-w-lg">
+          نستخلص أنقى دهن العود الكمبودي المعتق، عنبر الحوت النادر، والمسك البلوري، لنصنع تحفاً عطرية صُممت لتعكس هيبتك وأناقتك الشرقية.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+          <a href="#collection" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#B38728] hover:from-[#E2C158] hover:to-[#C69631] text-[#1A0A15] font-bold text-center shadow-lg shadow-[#D4AF37]/20 transition-all font-amiri text-lg">
+            اكتشف المجموعة الملكية
+          </a>
+          <a href="#pyramid" class="px-8 py-3.5 rounded-full border border-[#4E273F] hover:border-[#D4AF37]/60 text-[#E0CEC9] text-center transition-all text-sm font-medium">
+            استكشف هرم النوتات
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Perfume Image -->
+      <div class="relative flex justify-center">
+        <div class="relative rounded-3xl overflow-hidden border border-[#4E273F]/80 p-2 bg-gradient-to-b from-[#2A1123] to-[#1A0A15] shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=800&auto=format&fit=crop&q=80" alt="عطر عود ملكي" class="w-full max-w-sm rounded-2xl h-[440px] object-cover">
+          <div class="absolute bottom-6 inset-x-6 bg-[#1A0A15]/90 backdrop-blur-md p-4 rounded-xl border border-[#D4AF37]/30 flex items-center justify-between">
+            <div>
+              <div class="font-amiri text-lg text-[#F5EDE8] font-bold">عود السلطان (Sultan Oud)</div>
+              <div class="text-xs text-[#BFA6A1]">خلاصة العود المعتق مع الزعفران الكشميري</div>
+            </div>
+            <span class="text-[#D4AF37] font-bold font-mono text-sm">2,450 ج.م</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 INTERACTIVE SCENT PYRAMID (هرم النوتات العطرية التفاعلي) -->
+  <section id="pyramid" class="py-20 bg-[#1A0A15] border-y border-[#381B2D]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+        <span class="text-xs text-[#D4AF37] font-amiri tracking-widest text-base">الكيمياء العطرية</span>
+        <h2 class="font-amiri text-3xl sm:text-4xl font-bold text-[#F5EDE8]">
+          الهرم العطري التفاعلي: تشريح الزجاجة
+        </h2>
+        <p class="text-xs sm:text-sm text-[#BFA6A1]">اضغط على طبقات الهرم لتتعرف على نوتات عطر (عود الليل) وتطور رائحته مع مرور الساعات:</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-[#230E1D] p-6 sm:p-10 rounded-3xl border border-[#4A253C]">
+        <!-- The Pyramid Diagram -->
+        <div class="space-y-3">
+          <!-- Top Tier -->
+          <div class="pyramid-step p-4 rounded-2xl border border-[#D4AF37] bg-[#D4AF37]/15 cursor-pointer transition-all hover:scale-[1.02]" data-tier="top">
+            <div class="flex items-center justify-between">
+              <span class="font-amiri font-bold text-lg text-[#F5EDE8]">1. قمة العطر (Top Notes)</span>
+              <span class="text-xs text-[#D4AF37] font-mono">أول 15 دقيقة</span>
+            </div>
+            <p class="text-xs text-[#C8B3B0] mt-1">الافتتاحية المنعشة التي تأسر حواسك من الرشة الأولى.</p>
+          </div>
+
+          <!-- Middle Tier -->
+          <div class="pyramid-step p-4 rounded-2xl border border-[#4A253C] bg-[#1A0A15] cursor-pointer transition-all hover:scale-[1.02]" data-tier="heart">
+            <div class="flex items-center justify-between">
+              <span class="font-amiri font-bold text-lg text-[#F5EDE8]">2. قلب العطر (Heart Notes)</span>
+              <span class="text-xs text-[#C8B3B0] font-mono">من ساعتين إلى 5 ساعات</span>
+            </div>
+            <p class="text-xs text-[#C8B3B0] mt-1">جوهر وهوية العطر الحقيقية التي تظهر بعد هدوء الافتتاحية.</p>
+          </div>
+
+          <!-- Base Tier -->
+          <div class="pyramid-step p-4 rounded-2xl border border-[#4A253C] bg-[#1A0A15] cursor-pointer transition-all hover:scale-[1.02]" data-tier="base">
+            <div class="flex items-center justify-between">
+              <span class="font-amiri font-bold text-lg text-[#F5EDE8]">3. قاعدة العطر (Base Notes)</span>
+              <span class="text-xs text-[#C8B3B0] font-mono">تدوم 24 ساعة فأكثر</span>
+            </div>
+            <p class="text-xs text-[#C8B3B0] mt-1">المكونات الأعمق والأثقل التي تمنح العطر ثباته الأسطوري وفوحانه.</p>
+          </div>
+        </div>
+
+        <!-- Dynamic Tier Details Display -->
+        <div id="tierDetailBox" class="p-6 rounded-2xl bg-[#170913] border border-[#D4AF37]/40 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-[#D4AF37]"></span>
+            <h3 id="tierTitle" class="font-amiri text-2xl font-bold text-[#F5EDE8]">قمة العطر: هيل هندي وورد طائفي</h3>
+          </div>
+          <p id="tierDesc" class="text-xs sm:text-sm text-[#BFA6A1] leading-relaxed">
+            افتتاحية نفاذة ودافئة تجمع بين حبات الهيل الأخضر المنتقى يدوياً من مزارع كيرلا مع قطرات الورد الطائفي النقي لتمنحك شعوراً فورياً بالفخامة والتميز.
+          </p>
+          <div class="pt-3 border-t border-[#381B2D]">
+            <span class="text-xs text-[#D4AF37] block mb-2 font-mono">المكونات المعيارية:</span>
+            <div id="tierBadges" class="flex flex-wrap gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-[#291322] border border-[#522942] text-xs text-[#E3D1CE]">هيل ملكي</span>
+              <span class="px-2.5 py-1 rounded-full bg-[#291322] border border-[#522942] text-xs text-[#E3D1CE]">زعفران إيراني</span>
+              <span class="px-2.5 py-1 rounded-full bg-[#291322] border border-[#522942] text-xs text-[#E3D1CE]">برغموت إيطالي</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection Grid -->
+  <section id="collection" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+        <span class="text-xs text-[#D4AF37] font-amiri tracking-widest text-base">المقتنيات الحصرية</span>
+        <h2 class="font-amiri text-3xl sm:text-4xl font-bold text-[#F5EDE8]">المجموعة العطرية لعام 2026</h2>
+        <p class="text-xs sm:text-sm text-[#BFA6A1]">اختر حجم الزجاجة وأضفها إلى حقيبتك العطرية مع ضمان الاسترجاع إن لم يناسبك العطر:</p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="productsContainer">
+        <!-- Perfume Card 1 -->
+        <div class="bg-[#1C0B17] border border-[#3E1C31] hover:border-[#D4AF37]/60 rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 gold-border-glow group">
+          <div>
+            <div class="rounded-2xl overflow-hidden mb-4 bg-[#271021] relative">
+              <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?w=600&auto=format&fit=crop&q=80" alt="عود الليل" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 right-3 bg-[#D4AF37] text-[#140810] text-[10px] font-bold px-2 py-0.5 rounded-full font-amiri">الأكثر طلباً</span>
+            </div>
+            <h3 class="font-amiri text-2xl font-bold text-[#F5EDE8] mb-1">عود الليل (Oud Night)</h3>
+            <p class="text-xs text-[#BFA6A1] mb-3">دهن عود كمبودي، عنبر خام، باتشولي</p>
+          </div>
+
+          <!-- Size switcher & price -->
+          <div class="pt-3 border-t border-[#311627] space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-[#BFA6A1]">الحجم:</span>
+              <div class="flex gap-1.5 size-toggle" data-base="1850">
+                <button class="px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#D4AF37] bg-[#D4AF37]/20 text-[#D4AF37]" data-size="100">100 مل</button>
+                <button class="px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#3E1C31] text-[#A68F8B]" data-size="50">50 مل</button>
+              </div>
+            </div>
+
+            <div class="flex items-baseline justify-between">
+              <span class="text-[#D4AF37] font-bold font-mono text-xl price-tag">1,850 ج.م</span>
+              <span class="text-[11px] text-[#A68F8B]">شحن مجاني</span>
+            </div>
+
+            <button class="add-to-cart-btn w-full py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B38728] text-[#140810] font-bold text-xs font-amiri hover:opacity-90 transition-opacity" data-id="1" data-title="عود الليل" data-price="1850" data-img="https://images.unsplash.com/photo-1547887537-6158d64c35b3?w=200&auto=format&fit=crop&q=80">
+              أضف إلى الحقيبة العطرية
+            </button>
+          </div>
+        </div>
+
+        <!-- Perfume Card 2 -->
+        <div class="bg-[#1C0B17] border border-[#3E1C31] hover:border-[#D4AF37]/60 rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 gold-border-glow group">
+          <div>
+            <div class="rounded-2xl overflow-hidden mb-4 bg-[#271021] relative">
+              <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&auto=format&fit=crop&q=80" alt="مسك الغيم" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="font-amiri text-2xl font-bold text-[#F5EDE8] mb-1">مسك الغيم (Cloud Musk)</h3>
+            <p class="text-xs text-[#BFA6A1] mb-3">مسك أبيض بيور، صندل هادئ، فانيلا</p>
+          </div>
+
+          <div class="pt-3 border-t border-[#311627] space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-[#BFA6A1]">الحجم:</span>
+              <div class="flex gap-1.5 size-toggle" data-base="1450">
+                <button class="px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#D4AF37] bg-[#D4AF37]/20 text-[#D4AF37]" data-size="100">100 مل</button>
+                <button class="px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#3E1C31] text-[#A68F8B]" data-size="50">50 مل</button>
+              </div>
+            </div>
+
+            <div class="flex items-baseline justify-between">
+              <span class="text-[#D4AF37] font-bold font-mono text-xl price-tag">1,450 ج.م</span>
+              <span class="text-[11px] text-[#A68F8B]">شحن مجاني</span>
+            </div>
+
+            <button class="add-to-cart-btn w-full py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B38728] text-[#140810] font-bold text-xs font-amiri hover:opacity-90 transition-opacity" data-id="2" data-title="مسك الغيم" data-price="1450" data-img="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=200&auto=format&fit=crop&q=80">
+              أضف إلى الحقيبة العطرية
+            </button>
+          </div>
+        </div>
+
+        <!-- Perfume Card 3 -->
+        <div class="bg-[#1C0B17] border border-[#3E1C31] hover:border-[#D4AF37]/60 rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 gold-border-glow group">
+          <div>
+            <div class="rounded-2xl overflow-hidden mb-4 bg-[#271021] relative">
+              <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&auto=format&fit=crop&q=80" alt="عنبر ملكي" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="font-amiri text-2xl font-bold text-[#F5EDE8] mb-1">عنبر ملكي (Royal Amber)</h3>
+            <p class="text-xs text-[#BFA6A1] mb-3">عنبر رمادي، جلد إيطالي، لبان حوجري</p>
+          </div>
+
+          <div class="pt-3 border-t border-[#311627] space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-[#BFA6A1]">الحجم:</span>
+              <div class="flex gap-1.5 size-toggle" data-base="2100">
+                <button class="px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#D4AF37] bg-[#D4AF37]/20 text-[#D4AF37]" data-size="100">100 مل</button>
+                <button class="px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#3E1C31] text-[#A68F8B]" data-size="50">50 مل</button>
+              </div>
+            </div>
+
+            <div class="flex items-baseline justify-between">
+              <span class="text-[#D4AF37] font-bold font-mono text-xl price-tag">2,100 ج.م</span>
+              <span class="text-[11px] text-[#A68F8B]">شحن مجاني</span>
+            </div>
+
+            <button class="add-to-cart-btn w-full py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B38728] text-[#140810] font-bold text-xs font-amiri hover:opacity-90 transition-opacity" data-id="3" data-title="عنبر ملكي" data-price="2100" data-img="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=200&auto=format&fit=crop&q=80">
+              أضف إلى الحقيبة العطرية
+            </button>
+          </div>
+        </div>
+
+        <!-- Perfume Card 4 -->
+        <div class="bg-[#1C0B17] border border-[#3E1C31] hover:border-[#D4AF37]/60 rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 gold-border-glow group">
+          <div>
+            <div class="rounded-2xl overflow-hidden mb-4 bg-[#271021] relative">
+              <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=600&auto=format&fit=crop&q=80" alt="ورد دمشقي" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <h3 class="font-amiri text-2xl font-bold text-[#F5EDE8] mb-1">ورد دمشقي (Damask Rose)</h3>
+            <p class="text-xs text-[#BFA6A1] mb-3">ورد جوري مقطر، ياسمين، مسك رقيق</p>
+          </div>
+
+          <div class="pt-3 border-t border-[#311627] space-y-3">
+            <div class="flex items-center justify-between text-xs">
+              <span class="text-[#BFA6A1]">الحجم:</span>
+              <div class="flex gap-1.5 size-toggle" data-base="1650">
+                <button class="px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#D4AF37] bg-[#D4AF37]/20 text-[#D4AF37]" data-size="100">100 مل</button>
+                <button class="px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#3E1C31] text-[#A68F8B]" data-size="50">50 مل</button>
+              </div>
+            </div>
+
+            <div class="flex items-baseline justify-between">
+              <span class="text-[#D4AF37] font-bold font-mono text-xl price-tag">1,650 ج.م</span>
+              <span class="text-[11px] text-[#A68F8B]">شحن مجاني</span>
+            </div>
+
+            <button class="add-to-cart-btn w-full py-2.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B38728] text-[#140810] font-bold text-xs font-amiri hover:opacity-90 transition-opacity" data-id="4" data-title="ورد دمشقي" data-price="1650" data-img="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=200&auto=format&fit=crop&q=80">
+              أضف إلى الحقيبة العطرية
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌟 INTERACTIVE SLIDE-OVER CART DRAWER (سلة المشتريات الجانبية) -->
+  <div id="cartDrawerBackdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity">
+    <div id="cartDrawer" class="fixed top-0 bottom-0 left-0 w-full max-w-md bg-[#1B0A16] border-r border-[#431F36] p-6 flex flex-col justify-between shadow-2xl transform -translate-x-full transition-transform duration-300">
+      
+      <!-- Cart Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-[#3B1C30]">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <h3 class="font-amiri text-2xl font-bold text-[#F5EDE8]">الحقيبة العطرية</h3>
+        </div>
+        <button id="closeCartBtn" class="text-[#BFA6A1] hover:text-white p-1 text-lg">✕</button>
+      </div>
+
+      <!-- Cart Items List -->
+      <div id="cartItemsContainer" class="flex-1 overflow-y-auto py-4 space-y-3">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- Cart Summary & Checkout -->
+      <div class="pt-4 border-t border-[#3B1C30] space-y-3">
+        <!-- Coupon Code -->
+        <div class="flex gap-2">
+          <input type="text" id="couponInput" placeholder="كود الخصم (جرب: ATHEER10)" class="bg-[#260E20] border border-[#4E273F] rounded-xl px-3 py-2 text-xs text-[#F5EDE8] flex-1 focus:outline-none focus:border-[#D4AF37]">
+          <button id="applyCouponBtn" class="px-3 py-2 bg-[#3A1830] hover:bg-[#4E273F] text-[#D4AF37] text-xs font-bold rounded-xl">تطبيق</button>
+        </div>
+
+        <div class="space-y-1.5 text-xs text-[#BFA6A1] font-mono">
+          <div class="flex justify-between">
+            <span>المجموع الفرعي:</span>
+            <span id="subtotalText">0 ج.م</span>
+          </div>
+          <div class="flex justify-between text-emerald-400" id="discountRow" style="display:none">
+            <span>خصم الكوبون (10%):</span>
+            <span id="discountText">- 0 ج.م</span>
+          </div>
+          <div class="flex justify-between">
+            <span>رسوم الشحن:</span>
+            <span class="text-emerald-400">مجاناً</span>
+          </div>
+          <div class="flex justify-between text-base font-bold text-[#D4AF37] pt-2 border-t border-[#311627]">
+            <span>الإجمالي المستحق:</span>
+            <span id="totalText">0 ج.م</span>
+          </div>
+        </div>
+
+        <button class="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#D4AF37] to-[#B38728] text-[#140810] font-bold text-sm font-amiri shadow-lg shadow-[#D4AF37]/20 hover:opacity-90 transition-opacity">
+          متابعة إتمام الطلب والدفع 🔒
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#12060E] border-t border-[#331527] py-12 text-xs text-[#A68F8B]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-right">
+      <div>
+        <span class="font-amiri text-lg text-[#F5EDE8] block mb-1">دار أثير للعطور الملكية الفاخرة</span>
+        <span>جميع الحقوق محفوظة © 2026 | تصميم وبرمجة: يوسف حاتم (E-Commerce Specialist)</span>
+      </div>
+      <div class="flex items-center gap-4 text-[#D4AF37]">
+        <a href="#top" class="hover:underline">أعلى المتجر ↑</a>
+        <a href="#collection" class="hover:underline">المجموعة</a>
+        <a href="#pyramid" class="hover:underline">النوتات</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // 1. Interactive Scent Pyramid Logic
+    const pyramidData = {
+      top: {
+        title: 'قمة العطر: هيل هندي وورد طائفي',
+        desc: 'افتتاحية نفاذة ودافئة تجمع بين حبات الهيل الأخضر المنتقى يدوياً من مزارع كيرلا مع قطرات الورد الطائفي النقي لتمنحك شعوراً فورياً بالفخامة والتميز.',
+        badges: ['هيل ملكي', 'زعفران إيراني', 'برغموت إيطالي']
+      },
+      heart: {
+        title: 'قلب العطر: عنبر دافئ وياسمين ملكي',
+        desc: 'تتفتح النوتات الوسطى بعد 20 دقيقة لتكشف عن دفء عنبر الحوت الطبيعي الممتزج بزهور الياسمين الليلية، وهو السر وراء الجاذبية والغموض في الرائحة.',
+        badges: ['عنبر دافئ', 'ياسمين ليلي', 'جوزة الطيب']
+      },
+      base: {
+        title: 'قاعدة العطر: عود كمبودي معتق ومسك بلوري',
+        desc: 'الأساس الصلب الذي يدوم لأكثر من 24 ساعة على الملابس، مستخلص من خشب العود المعتق لعشر سنوات مع مسك غزال نباتي نظيف يترك أثراً لا يُمحى.',
+        badges: ['عود كمبودي 10 سنوات', 'مسك أبيض', 'خشب الأرز']
+      }
+    };
+
+    document.querySelectorAll('.pyramid-step').forEach(step => {
+      step.addEventListener('click', () => {
+        document.querySelectorAll('.pyramid-step').forEach(s => {
+          s.className = 'pyramid-step p-4 rounded-2xl border border-[#4A253C] bg-[#1A0A15] cursor-pointer transition-all hover:scale-[1.02]';
+        });
+        step.className = 'pyramid-step p-4 rounded-2xl border border-[#D4AF37] bg-[#D4AF37]/15 cursor-pointer transition-all hover:scale-[1.02]';
+        
+        const tier = step.dataset.tier;
+        const data = pyramidData[tier];
+        document.getElementById('tierTitle').textContent = data.title;
+        document.getElementById('tierDesc').textContent = data.desc;
+        
+        const badgesContainer = document.getElementById('tierBadges');
+        badgesContainer.innerHTML = data.badges.map(b => 
+          `<span class="px-2.5 py-1 rounded-full bg-[#291322] border border-[#522942] text-xs text-[#E3D1CE]">${b}</span>`
+        ).join('');
+      });
+    });
+
+    // 2. Volume & Dynamic Price Switcher on Cards
+    document.querySelectorAll('.size-toggle').forEach(toggle => {
+      const basePrice = parseInt(toggle.dataset.base, 10);
+      const card = toggle.closest('.group');
+      const priceTag = card.querySelector('.price-tag');
+      const addBtn = card.querySelector('.add-to-cart-btn');
+
+      toggle.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          toggle.querySelectorAll('button').forEach(b => {
+            b.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#3E1C31] text-[#A68F8B]';
+          });
+          btn.className = 'px-2.5 py-1 rounded-md text-[11px] font-bold border border-[#D4AF37] bg-[#D4AF37]/20 text-[#D4AF37]';
+          
+          const size = parseInt(btn.dataset.size, 10);
+          const currentPrice = size === 50 ? Math.round(basePrice * 0.65) : basePrice;
+          priceTag.textContent = currentPrice.toLocaleString('en-US') + ' ج.م';
+          addBtn.dataset.price = currentPrice;
+          addBtn.dataset.size = size + ' مل';
+        });
+      });
+    });
+
+    // 3. Cart Drawer State & Calculations
+    let cart = [];
+    let discount = 0;
+
+    const cartBackdrop = document.getElementById('cartDrawerBackdrop');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const openCartBtn = document.getElementById('openCartBtn');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+    const cartCountBadge = document.getElementById('cartCountBadge');
+    const cartItemsContainer = document.getElementById('cartItemsContainer');
+    const subtotalText = document.getElementById('subtotalText');
+    const totalText = document.getElementById('totalText');
+    const discountRow = document.getElementById('discountRow');
+    const discountText = document.getElementById('discountText');
+
+    function toggleCart(open) {
+      if (open) {
+        cartBackdrop.classList.remove('hidden');
+        setTimeout(() => cartDrawer.classList.remove('-translate-x-full'), 10);
+      } else {
+        cartDrawer.classList.add('-translate-x-full');
+        setTimeout(() => cartBackdrop.classList.add('hidden'), 300);
+      }
+    }
+
+    openCartBtn.addEventListener('click', () => toggleCart(true));
+    closeCartBtn.addEventListener('click', () => toggleCart(false));
+    cartBackdrop.addEventListener('click', (e) => {
+      if (e.target === cartBackdrop) toggleCart(false);
+    });
+
+    function renderCart() {
+      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      cartCountBadge.textContent = totalCount;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="text-center py-12 text-[#8E7976]">
+            <p class="font-amiri text-lg">حقيبتك العطرية فارغة حالياً</p>
+            <p class="text-xs mt-1">تصفح المجموعة واختر عطرك المفضل</p>
+          </div>
+        `;
+        subtotalText.textContent = '0 ج.م';
+        totalText.textContent = '0 ج.م';
+        discountRow.style.display = 'none';
+        return;
+      }
+
+      cartItemsContainer.innerHTML = cart.map((item, idx) => `
+        <div class="flex items-center gap-3 p-3 bg-[#240F20] rounded-xl border border-[#3E1C31]">
+          <img src="${item.img}" class="w-12 h-14 object-cover rounded-lg">
+          <div class="flex-1">
+            <h4 class="font-amiri font-bold text-sm text-[#F5EDE8]">${item.title}</h4>
+            <span class="text-[11px] text-[#A68F8B]">${item.size || '100 مل'}</span>
+            <div class="text-[#D4AF37] font-bold font-mono text-xs">${(item.price * item.qty).toLocaleString()} ج.م</div>
+          </div>
+          <div class="flex items-center gap-1.5 border border-[#4E273F] rounded-lg px-2 py-1 text-xs">
+            <button onclick="updateQty(${idx}, -1)" class="text-[#C8B3B0] hover:text-white px-1">-</button>
+            <span class="font-mono text-white font-bold">${item.qty}</span>
+            <button onclick="updateQty(${idx}, 1)" class="text-[#C8B3B0] hover:text-white px-1">+</button>
+          </div>
+        </div>
+      `).join('');
+
+      const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const discountVal = subtotal * discount;
+      const total = subtotal - discountVal;
+
+      subtotalText.textContent = subtotal.toLocaleString() + ' ج.م';
+      if (discount > 0) {
+        discountRow.style.display = 'flex';
+        discountText.textContent = '- ' + discountVal.toLocaleString() + ' ج.م';
+      } else {
+        discountRow.style.display = 'none';
+      }
+      totalText.textContent = total.toLocaleString() + ' ج.م';
+    }
+
+    window.updateQty = function(idx, delta) {
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      renderCart();
+    };
+
+    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.id;
+        const title = btn.dataset.title;
+        const price = parseInt(btn.dataset.price, 10);
+        const img = btn.dataset.img;
+        const size = btn.dataset.size || '100 مل';
+
+        const existing = cart.find(item => item.id === id && item.size === size);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ id, title, price, img, size, qty: 1 });
+        }
+
+        renderCart();
+        toggleCart(true);
+      });
+    });
+
+    // 4. Coupon Code Logic
+    document.getElementById('applyCouponBtn').addEventListener('click', () => {
+      const code = document.getElementById('couponInput').value.trim().toUpperCase();
+      if (code === 'ATHEER10') {
+        discount = 0.10;
+        alert('✨ تم تطبيق خصم 10% بنجاح على حقيبتك العطرية!');
+        renderCart();
+      } else {
+        alert('الكود غير صحيح. جرّب: ATHEER10');
+      }
+    });
+  </script>
+</body>
+</html>
